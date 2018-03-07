@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer", "NumberHu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer.UnitTests", "..\NumberHumanizer.UnitTests\NumberHumanizer.UnitTests.csproj", "{26CF8153-69F5-43ED-BB43-D1C6779314F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer.BusinessLogic", "NumberHumanizer.BusinessLogic\NumberHumanizer.BusinessLogic.csproj", "{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{26CF8153-69F5-43ED-BB43-D1C6779314F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26CF8153-69F5-43ED-BB43-D1C6779314F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26CF8153-69F5-43ED-BB43-D1C6779314F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
