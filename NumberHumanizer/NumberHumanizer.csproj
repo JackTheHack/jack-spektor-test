@@ -146,14 +146,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NumberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ApiResult.cs" />
+    <Compile Include="Models\NumberTransformRequest.cs" />
+    <Compile Include="Models\NumberTransformResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\js\app.js" />
     <Content Include="favicon.ico" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -188,7 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
@@ -196,6 +200,12 @@
     <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Assets\js\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumberHumanizer.BusinessLogic\NumberHumanizer.BusinessLogic.csproj">
+      <Project>{a513a7b5-2a6b-4fb7-a68a-8a59275244ee}</Project>
+      <Name>NumberHumanizer.BusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

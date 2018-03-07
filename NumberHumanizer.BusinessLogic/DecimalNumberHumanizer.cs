@@ -14,10 +14,10 @@ namespace NumberHumanizer.BusinessLogic
                 throw new ArgumentNullException(nameof(number));
             }
 
-            string[] numberParts = number.Split(new char[] {',','.'}, StringSplitOptions.RemoveEmptyEntries).ToArray();
+            string[] numberParts = number.Split(',', '.').ToArray();
 
             int numberValue = 0;
-            if (!int.TryParse(number, out numberValue))
+            if (!int.TryParse(numberParts[0], out numberValue))
             {
                 throw new ArgumentException("Argument is not a number", nameof(number));
             }
@@ -26,9 +26,14 @@ namespace NumberHumanizer.BusinessLogic
 
             if (numberParts.Length > 1)
             {
-                if (!int.TryParse(number, out decimalValue))
+                if (string.IsNullOrEmpty(numberParts[1]))
                 {
-                    throw new ArgumentException("Argument is not a number", nameof(number));
+                    throw new ArgumentNullException(nameof(number));
+                }
+
+                if (!int.TryParse(numberParts[1], out decimalValue))
+                {
+                    throw new ArgumentException("Decimal argument is not a number", nameof(number));
                 }
             }
             

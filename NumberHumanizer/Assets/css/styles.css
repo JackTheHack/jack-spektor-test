@@ -12,11 +12,14 @@
     border: solid 1px lightgray;
     -webkit-box-shadow: 5px 5px lightgray;
     padding: 40px;
+
+    -moz-transition: opacity, left 0.5s linear;
+    transition: opacity, left 0.5s linear;    
 }
 
 .input-container {
     width: 65%;
-    left: -40%;
+    left: -65%;
 }
 
 .input-container.active {
@@ -29,5 +32,11 @@
 }
 
 .output-container.active {
-    left: 30%;
+    left: 5%;
+}
+
+.output-container__number {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 25px;
 }
