@@ -16,6 +16,11 @@ namespace NumberHumanizer.Controllers
 
         public ApiResult<NumberTransformResponse> Transform(NumberTransformRequest request)
         {
+            if (request == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             try
             {
                 return new ApiResult<NumberTransformResponse>()

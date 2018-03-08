@@ -8,6 +8,7 @@
 
     function showOutputPanel(result) {
         $(".input-container").removeClass("active");
+        $(".validation-summary-errors").addClass("hidden");
         $(".output-container").removeClass("invisible").addClass("active");
         $(".output-container .tryagain").on("click",
             function() {
@@ -17,17 +18,32 @@
         $(".output-container .output-container__username").html('Hey, ' + result.Result.Name);
     }
 
-    $(".input-container button").on("click", function() {
+    $(".input-container #mainform").on("submit", function (e) {
+
+        var isValid = this.checkValidity();
+
+        //$(".input-container input, .input-container textarea").each(function() {
+        //    if (!this.checkValidity()) {
+        //        isValid = false;
+        //    }
+        //});
+
+        if (!isValid) {
+            e.preventDefault();
+            return;
+        }
+
         var name = $(".input-container input[name=Name]").val();
         var number = $(".input-container textarea[name=Number]").val();
-        $.post("/api/Number/Transform",
-            { Name: name, Number: number })
+        $.post("/api/Number/Transform", { Name: name, Number: number })
          .done(function (result) {
                 if (result.IsSuccess) {
                     showOutputPanel(result);
                 } else {
-                    //TODO: Error message handling
+                    $(".validation-summary-errors").removeClass("hidden").html("Error: " + result.ErrorMessage);
                 }
-            });
+         });
+
+        e.preventDefault();
     });
 });

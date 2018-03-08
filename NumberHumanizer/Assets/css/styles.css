@@ -22,6 +22,17 @@
     left: -65%;
 }
 
+
+.input-container .validation-summary-errors {
+    color: red;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.input-container textarea:focus:invalid, .input-container input:focus:invalid{
+    border: 1px solid red;
+}
+
 .input-container.active {
     left: 0%;
 }

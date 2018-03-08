@@ -11,7 +11,7 @@ namespace NumberHumanizer.BusinessLogic
         {
             if (string.IsNullOrEmpty(number))
             {
-                throw new ArgumentNullException(nameof(number));
+                throw new ArgumentException("Number can't be empty.");
             }
 
             string[] numberParts = number.Split(',', '.').ToArray();
@@ -19,7 +19,7 @@ namespace NumberHumanizer.BusinessLogic
             int numberValue = 0;
             if (!int.TryParse(numberParts[0], out numberValue))
             {
-                throw new ArgumentException("Argument is not a number", nameof(number));
+                throw new ArgumentException("Please provide a valid number. Number must be between -2147483647 and 2147483647.");
             }
 
             int decimalValue = 0;
@@ -28,12 +28,16 @@ namespace NumberHumanizer.BusinessLogic
             {
                 if (string.IsNullOrEmpty(numberParts[1]))
                 {
-                    throw new ArgumentNullException(nameof(number));
+                    throw new ArgumentException("Decimal number part can't be empty.");
                 }
 
-                if (!int.TryParse(numberParts[1], out decimalValue))
+                //Normalise decimal part to 2 points
+                var normalisedDecimalPart = numberParts[1].Length > 2 ? numberParts[1].Substring(0, 2) : numberParts[1];
+                normalisedDecimalPart = normalisedDecimalPart.Length == 1  ? normalisedDecimalPart + "0" : normalisedDecimalPart;
+
+                if (!int.TryParse(normalisedDecimalPart, out decimalValue))
                 {
-                    throw new ArgumentException("Decimal argument is not a number", nameof(number));
+                    throw new ArgumentException("Decimal argument is not a number.");
                 }
             }
             
