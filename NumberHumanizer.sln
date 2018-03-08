@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer", "NumberHumanizer\NumberHumanizer.csproj", "{09E34012-AF41-4F53-ADD1-51FD25B4971C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer.UnitTests", "..\NumberHumanizer.UnitTests\NumberHumanizer.UnitTests.csproj", "{26CF8153-69F5-43ED-BB43-D1C6779314F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer.UnitTests", "NumberHumanizer.UnitTests\NumberHumanizer.UnitTests.csproj", "{26CF8153-69F5-43ED-BB43-D1C6779314F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberHumanizer.BusinessLogic", "NumberHumanizer.BusinessLogic\NumberHumanizer.BusinessLogic.csproj", "{A513A7B5-2A6B-4FB7-A68A-8A59275244EE}"
 EndProject

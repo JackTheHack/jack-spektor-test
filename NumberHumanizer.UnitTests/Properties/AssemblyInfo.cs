@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NumberHumanizer.Tests")]
+[assembly: AssemblyTitle("NumberHumanizer.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NumberHumanizer.Tests")]
+[assembly: AssemblyProduct("NumberHumanizer.UnitTests")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("afa0774b-8fde-4e35-99fa-fa4975936786")]
+[assembly: Guid("26cf8153-69f5-43ed-bb43-d1c6779314f1")]
 
 // Version information for an assembly consists of the following four values:
 //
